@@ -1,0 +1,44 @@
+.d{
+    position: absolute;
+    right: 0px;
+    top: 390px;
+    left: 50%;
+    right: 100px;
+    
+
+}
+#c{
+    font-size: 48px;
+    font-family: "Courier New";
+    font-weight: bold;
+}
+.img{
+    margin-left: 100px;
+    margin-top: 100px;
+    color: blue;
+
+}
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+#p{
+    color:green;
+    font-size: 30px;
+    font-weight: bold;
+}
+#d{
+    font-size: 20px;
+    color: red;
+}
+#dis{
+    
+    background-color: yellow ;
+}
+li{
+    background-color: greenyellow;
+}
+label{
+    font-weight: bold;
+    color:white;
+}

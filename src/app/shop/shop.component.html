@@ -1,0 +1,27 @@
+<h1>INVENTORY</h1>
+<div class="pos">
+        <span>Stort by </span><select class="form-control">
+    <option>FEATURED</option>
+    <option>ALPHBERICALLY A-Z</option>
+    <option>ALPHBERICALLY A-Z</option>
+    <option>BEST SELLING</option>
+</select></div>
+<hr class="bg-dark">
+            <div class="row" >
+                    <div *ngFor='let a of article' class="col-sm-3">
+                            
+                            <img class="card-img-top" [src]="a.photo" >
+                            
+                      <div class="card">
+                        <div class="card-body">
+                              <h6> {{a.matricule}}</h6><span class="text-center">
+                          <h5 class="card-title">{{a.libelle}}</h5>
+                          <h5  class="text-success">{{a.prix|currency}}</h5></span>
+                          <div class="text-center">
+                          <a  [routerLink]="['/selectart',a.matricule]" ><img src="./assets/e.png" width="35"></a>   </div>                     </div>
+                      </div><br><br><br>
+                    </div >
+                  </div>
+                  
+                
+                

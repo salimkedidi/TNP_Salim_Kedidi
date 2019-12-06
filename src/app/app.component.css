@@ -1,0 +1,17 @@
+h1{
+    font-family: "Brush Script MT" ;
+    color: greenyellow;
+    
+}
+/*menu*/
+.w{
+    position: absolute;
+  top: 32px;
+  right: 10px;
+}
+span{
+    margin-top: 0px;
+    margin-left:270px;
+    font-weight: bold;
+    font-size: 80px;
+}

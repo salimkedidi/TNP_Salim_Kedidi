@@ -1,0 +1,15 @@
+<div class="img"><p>Ref:{{article.matricule}}</p>
+<img class="img-thumbnail" [src]="article.photo" width="40%"></div>
+<div class="d">
+        <button class="btn btn-danger" (click)="addcart(prod)" >Add to Cart</button>
+        <label>Qte</label><input class="form-control-sm" type="number" value="1" [disabled]=!article.onstock>
+    <ul class="list-group">
+            <li id="c" class="list-group-item"><strong>{{article.libelle}}</strong></li>
+            <li id="p" class="list-group-item">{{article.prix|currency}}</li>
+            <li id="d" class="list-group-item">Date mise en vente Le: {{article.date|date}}</li>
+            <li id="dis" class="list-group-item " ><input id="dis" type="checkbox" disabled [checked]="article.onstock" >Disponible</li>
+        </ul>
+        <button class="btn btn-dark" (click)="onRetour()">Retour</button>
+
+    </div>
+    
