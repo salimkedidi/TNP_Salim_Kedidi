@@ -1,14 +1,21 @@
+
 <h1>INVENTORY</h1>
+  <div class="form-group sr">
+  <input type="text" class="form-control" placeholder="Search By Name"
+  style="width: 350px;" [(ngModel)]="searchTerm" > 
+</div>
 <div class="pos">
-        <span>Stort by </span><select class="form-control">
+        <span>Stort by </span><select  [(ngModel)]="stort"class="form-control">
     <option>FEATURED</option>
     <option>ALPHBERICALLY A-Z</option>
-    <option>ALPHBERICALLY A-Z</option>
+    <option>ALPHBERICALLY Z-A</option>
     <option>BEST SELLING</option>
+
 </select></div>
 <hr class="bg-dark">
+
             <div class="row" >
-                    <div *ngFor='let a of article' class="col-sm-3">
+                    <div *ngFor='let a of article | articleFilter:searchTerm ' class="col-sm-3">
                             
                             <img class="card-img-top" [src]="a.photo" >
                             

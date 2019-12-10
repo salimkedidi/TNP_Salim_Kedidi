@@ -12,6 +12,8 @@ import { ContactComponent } from './contact/contact.component';
 import { E404Component } from './e404/e404.component';
 import { SelectartComponent } from './selectart/selectart.component';
 import { CartComponent } from './cart/cart.component';
+import { ArticleFilterPipe } from './article-filter.pipe';
+import { productsSortPipe } from './productsSortPipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CartComponent } from './cart/cart.component';
     ContactComponent,
     E404Component,
     SelectartComponent,
-    CartComponent
+    CartComponent,
+    ArticleFilterPipe,
+    productsSortPipe
   ],
   imports: [
     BrowserModule,

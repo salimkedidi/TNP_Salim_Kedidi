@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'selectart', component:SelectartComponent },
   {path:'selectart/:matricule', component:SelectartComponent},
 
-  {path:'', redirectTo:'shop', pathMatch:'full'},
+  {path:'', redirectTo:'about', pathMatch:'full'},
 
   {path:'**', component:E404Component}
 

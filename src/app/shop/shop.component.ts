@@ -8,11 +8,14 @@ import { Article } from '../article';
 })
 export class ShopComponent implements OnInit {
   article:Article[];
+  searchTerm:string;
+  stort:string="FEATURED";
   constructor(private articlesService: ArticlesService) { }
 
   ngOnInit() {
     this.article= this.articlesService.lesArticles;
 
   }
+ 
 
 }

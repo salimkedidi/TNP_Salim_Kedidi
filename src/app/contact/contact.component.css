@@ -1,0 +1,24 @@
+.tt{
+    color: black;
+    /*font-weight: bold;*/
+    font-family: "Courier New";
+    font-size: 65px;
+}
+span{
+    color: red;
+}
+#r{
+    color: blue;
+}
+
+/*validation*/
+input.ng-valid{
+    border-left: 4px solid green;
+}
+input.ng-invalid{
+    border-left: 4px solid red;
+}
+p{
+    font-size: 30px;
+    color: yellow;
+}

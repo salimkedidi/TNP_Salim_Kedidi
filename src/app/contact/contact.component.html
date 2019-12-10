@@ -1,1 +1,55 @@
-<p>contact works!</p>
+<br><br>
+<h1 class="tt">Contact</h1>
+ <div [hidden]="submitted" class="container"> 
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+       
+        <div class="form-group">
+       
+                <input type="text" id="name" name="nom" [(ngModel)]="name"  placeholder="Name" #nom="ngModel"  class="form-control"required pattern="[A-Z][a-zA-Z]+">
+            </div>
+
+          
+           
+           <div *ngIf="nom.errors?.pattern && nom.dirty" class="alert alert-danger"> Le nom doit commencer par une majuscule  </div>
+
+        <div [hidden]="nom.valid||nom.pristine" class="alert alert-danger">
+             Le nom ne peut pas être une chaîne vide
+         </div> 
+
+         <div class="form-group">
+
+                <input type="email" id="email" name="email" [(ngModel)]="EMAIL"  placeholder="Email" class="form-control" required email #email="ngModel"  >
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                        <div *ngIf="email.errors.required" class="alert alert-danger">Email is required.</div>
+                        <div *ngIf="email.errors.email" class="alert alert-danger">Email must be a valid email address.</div>
+                      </div>
+                    </div>
+
+                    
+            <div class="form-group">
+                    <input type="number" placeholder="Phone" id="tel" name="tel" [(ngModel)]="Phone" #tel="ngModel" required class="form-control">
+                  </div>
+                  <div [hidden]="tel.valid||tel.pristine" class="alert alert-danger">
+                        Le numero de telephone doit être validee
+                    </div>
+
+                    
+            <div class="form-group">
+                    <textarea name="message" id="message" [(ngModel)]="Message" rows="5" class="form-control" placeholder="Message" required #message="ngModel"></textarea>
+                    <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
+                      <div *ngIf="message.errors.required" class="alert alert-danger">Message is required.</div>
+                    </div>
+                  </div>
+                 
+
+
+        <button type="submit" [disabled]="f.invalid"  class="btn btn-success">Envoyer</button>
+        <button class="btn btn-danger" (click)="f.reset(); submitted =false;">Vider</button>
+    </form>
+</div>
+<div [hidden] ="!submitted">
+        <br/><br>
+        <p>
+        VOTRE MESSAGE EST ENVOYER AVEC SUCCéS        </p>
+        <button (click)="onRetour()"  class="btn btn-primary">Retour</button>
+    </div> 
